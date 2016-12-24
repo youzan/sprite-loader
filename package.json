@@ -1,0 +1,15 @@
+{
+  "name": "sprite-loader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "liwei <liwei@youzan.com>",
+  "license": "MIT",
+  "dependencies": {
+    "css": "^2.2.1",
+    "lodash": "^4.17.2",
+    "spritesmith": "^3.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}

@@ -1,0 +1,8 @@
+.class1 {background: url(http://a.cdn.cn/pic1.png) repeat-x;}
+
+.class2 {background: url(http://a.cdn.cn/pic2.png) repeat-x;}
+
+.class3 {background: url(http://a.cdn.cn/pic3@2x.png);}
+
+.class4 {background: url(http://a.cdn.cn/pic4@2x.png);}
+.class5 {background: url(http://a.cdn.cn/pic5@2x.png); background-position: top left}
