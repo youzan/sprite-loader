@@ -31,12 +31,6 @@ body {
     background: url(./img/llama.png);
 }
 
-.pie {
-    width: 200px;
-    height: 200px;
-    background: url(./img/pie.png);
-}
-
 .rabbit {
     width: 100px;
     height: 100px;
@@ -77,4 +71,9 @@ body {
     width: 50px;
     height: 50px;
     background-image: url(./img/tram@2x.png);
+}
+.pie {
+    width: 100px;
+    height: 100px;
+    background: url(./img/pie@2x.png);
 }
