@@ -5,9 +5,16 @@
   "author": "liwei <liwei@youzan.com>",
   "license": "MIT",
   "dependencies": {
+    "co": "^4.6.0",
     "css": "^2.2.1",
+    "css-loader": "^0.26.1",
+    "file-loader": "^0.9.0",
     "lodash": "^4.17.2",
-    "spritesmith": "^3.1.0"
+    "lwip": "^0.0.9",
+    "spritesmith": "^3.1.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.14.0"
   },
   "devDependencies": {
     "mocha": "^3.2.0"

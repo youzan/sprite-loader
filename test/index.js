@@ -1,6 +1,7 @@
 'use strict';
 const css = require('css');
 const assert = require('assert');
+const path = require('path');
 const loader = require('../lib/loader');
 
 describe('sprite-loader', function () {
@@ -48,5 +49,19 @@ describe('sprite-loader', function () {
         assert.equal(groups[0].defs.length, 2);
         assert.equal(groups[1].ratio, 2);
         assert.equal(groups[1].defs.length, 2);
+    });
+
+    it('should createSpriteImage', function (done) {
+        loader.createSpriteImage(['christmas_gift.png', 'christmas_mitten.png',
+                'cookies.png', 'pie.png'].map(join))
+            .then(meta => {
+                assert(meta.coordinates);
+                done();
+            })
+            .catch(e => done(e));
+
+        function join(name) {
+            return path.join(__dirname, 'createSprite', name)
+        }
     });
 });
