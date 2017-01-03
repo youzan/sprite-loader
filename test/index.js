@@ -37,11 +37,11 @@ describe('sprite-loader', function () {
     });
 
     it('should group', function () {
-        let cssText = '.class1 {background: url(http://a.cdn.cn/pic1.png) repeat-x;}\
-                    .class2 {background: url(http://a.cdn.cn/pic2.png) repeat-x;}\
-                    .class3 {background-image: url(http://a.cdn.cn/pic3@2x.png);}\
-                    .class4 {background: url(http://a.cdn.cn/pic4@2x.png);}\
-                    .class5 {background: url(http://a.cdn.cn/pic5@2x.png); background-position: top left}';
+        let cssText = '.class1 {background: url(pic1.png) repeat-x;}\
+                    .class2 {background: url(pic2.png) repeat-x;}\
+                    .class3 {background-image: url(pic3@2x.png);}\
+                    .class4 {background: url(pic4@2x.png);}\
+                    .class5 {background: url(pic5@2x.png); background-position: top left}';
         let ast = css.parse(cssText);
         let groups = loader.grouping(ast.stylesheet.rules);
         assert.equal(groups.length, 2);
