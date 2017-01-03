@@ -32,8 +32,8 @@ describe('sprite-loader', function () {
                 value: 'repeat-y'
             }]
         });
-        assert.equal(val1, 'x');
-        assert.equal(val2, 'y');
+        assert.equal(val1, 'repeat-x');
+        assert.equal(val2, 'repeat-y');
     });
 
     it('should group', function () {
@@ -45,7 +45,7 @@ describe('sprite-loader', function () {
         let ast = css.parse(cssText);
         let groups = loader.grouping(ast.stylesheet.rules);
         assert.equal(groups.length, 2);
-        assert.equal(groups[0].repeat, 'x');
+        assert.equal(groups[0].repeat, 'repeat-x');
         assert.equal(groups[0].defs.length, 2);
         assert.equal(groups[1].ratio, 2);
         assert.equal(groups[1].defs.length, 2);
