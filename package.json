@@ -1,6 +1,6 @@
 {
   "name": "@youzan/sprite-loader",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "index.js",
   "author": "liwei <liwei@youzan.com>",
   "license": "MIT",
