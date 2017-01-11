@@ -1,14 +1,14 @@
 {
   "name": "@youzan/sprite-loader",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "main": "index.js",
   "author": "liwei <liwei@youzan.com>",
   "license": "MIT",
   "dependencies": {
     "co": "^4.6.0",
     "css": "^2.2.1",
+    "jimp": "^0.2.27",
     "lodash": "^4.17.2",
-    "lwip": "^0.0.9",
     "spritesmith": "^3.1.0"
   },
   "devDependencies": {
