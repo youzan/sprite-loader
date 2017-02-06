@@ -11,7 +11,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.css/,
-                loader: 'style!css!sprite'
+                loader: 'style!css!'+require.resolve('../index.js')
             },
             {
                 test: /\.(png|jpg|gif)$/,

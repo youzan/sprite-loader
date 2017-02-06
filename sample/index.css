@@ -1,11 +1,14 @@
 /* sprite-loader-enable */
 body {
     display: flex;
-    justify-content: center;
 }
 
 .box {
     margin: 0 30px;
+}
+
+.box * {
+    margin: 5px;
 }
 
 .bat {
@@ -73,8 +76,23 @@ body {
     height: 50px;
     background-image: url(./img/tram@2x.png);
 }
+
 .pie {
     width: 100px;
     height: 100px;
     background: url(./img/pie@2x.png);
+}
+
+.repeatx1 {
+    height: 50px;
+    width: 200px;
+    background-image: url(./img/x1@2x.png);
+    background-repeat: repeat-x;
+}
+
+.repeatx2 {
+    height: 50px;
+    width: 200px;
+    background-image: url(./img/x2@2x.png);
+    background-repeat: repeat-x;
 }
