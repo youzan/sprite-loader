@@ -6,7 +6,7 @@ const loader = require('../lib/loader');
 
 describe('sprite-loader', function () {
     it('should getBgImgDef', function () {
-        let def1 = loader.getBgImgDef({declarations: [{property: 'background', value: 'url(../test.png)'}]});
+        let def1 = loader.getBgImgDef({declarations: [{property: 'background', value: 'url(../test.GIF)'}]});
         let def2 = loader.getBgImgDef({declarations: [{property: 'background-image', value: 'url("../test.png")'}]});
         let def3 = loader.getBgImgDef({
             declarations: [{
@@ -14,9 +14,11 @@ describe('sprite-loader', function () {
                 value: 'url( ../test.png) no-repeat top left'
             }]
         });
-        assert.equal(def1.url, '../test.png');
+        let def4 = loader.getBgImgDef({declarations: [{property: 'background-image', value: 'url("../test.png#spriteignore")'}]});
+        assert.equal(def1.url, '../test.GIF');
         assert.equal(def2.url, '../test.png');
         assert.equal(def3.url, '../test.png');
+        assert(!def4);
     });
 
     it('should getRepeatType', function () {

@@ -31,21 +31,19 @@ loaders: [
 ```
 ## 使用
 ### 1.基本用法
-首先需要在样式文件前加一行注释sprite-loader-enable，否则sprite-loader将忽略该文件。
-
-在样式中按照最原始的方法引用图片，如下：
+首先需要在样式文件前加一行注释sprite-loader-enable启用自动合并。然后按照最原始的方法引用图片即可。如下：
 
 ```
 /* sprite-loader-enable */
 .flip_flops {
     width: 16px;
     height: 16px;
-    background-image: url(./img/flip_flops@2x.png);
+    background: url(./img/flip_flops@2x.png);
 }
 .tram {
     width: 50px;
     height: 50px;
-    background-image: url(./img/tram@2x.png);
+    background: url(./img/tram@2x.png);
 }
 .pie {
     width: 100px;
@@ -86,5 +84,23 @@ sprite-loader会收集样式表中的图片进行合并，计算background-posit
 }
 ```
 
-### 2.Retina屏适配
-Retina屏适配非常简单，你只需将图片存为2倍大小，且命名为xxx@2x.png。sprite-loader将针对2倍图单独分组并压缩1倍图和添加media query。
+### 2.适配Retina屏
+Retina屏适配非常简单，你只需将图片存为2倍大小，且命名为xxx@2x.png。sprite-loader将会自动生成1x图和media query。
+
+### 3.禁用合并
+sprite-loader会收集样式文件中所有的background,background-image属性的图片进行合并，但以下几种情况除外。
+
+1. 设置了background-position，background-size的图片。
+	
+	```
+	/* 忽略有background-position的图片 */
+	.bg1{background: url(1.png) no-repeat -10px -10px;}
+	/* 忽略有background-size的图片 */
+	.bg2{background: url(2.png); background-size: 10px 10px;}
+	```
+2. url带#spriteignore参数的图片。
+	
+	```
+	/* 忽略有#spriteignore的图片 */
+	.bg3{background: url(3.png#spriteignore);}
+	```
