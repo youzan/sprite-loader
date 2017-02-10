@@ -1,9 +1,9 @@
 {
   "name": "sprite-loader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "sprite loader module for webpack",
   "main": "index.js",
-  "author": "vinnyguitar <vinnyguitar@126.com>",
+  "author": "liwei <vinnyguitar@126.com>",
   "dependencies": {
     "co": "^4.6.0",
     "css": "^2.2.1",
@@ -20,7 +20,7 @@
     "webpack": "^1.14.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "node_modules/mocha/bin/mocha test"
   },
   "repository": {
     "type": "git",

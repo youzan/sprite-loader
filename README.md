@@ -11,7 +11,7 @@
 
 ## 安装
 ```
-	yarn add @youzan/sprite-loader
+	npm install sprite-loader --save
 ```
 
 ## 配置
@@ -21,11 +21,11 @@
 loaders: [
     {
         test: /\.css/,
-        loader: 'style!@youzan/sprite-loader!css'
+        loader: 'style!sprite!css'
     },
     {
         test: /\.scss$/,
-        loader: 'style!@youzan/sprite-loader!css!sass'
+        loader: 'style!sprite!css!sass'
     }
 ]
 ```
