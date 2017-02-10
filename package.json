@@ -1,9 +1,9 @@
 {
-  "name": "@youzan/sprite-loader",
+  "name": "sprite-loader",
   "version": "0.1.1",
+  "description": "sprite loader module for webpack",
   "main": "index.js",
-  "author": "liwei <liwei@youzan.com>",
-  "license": "MIT",
+  "author": "vinnyguitar <vinnyguitar@126.com>",
   "dependencies": {
     "co": "^4.6.0",
     "css": "^2.2.1",
@@ -18,5 +18,13 @@
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
     "webpack": "^1.14.0"
-  }
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:youzan/sprite-loader.git"
+  },
+  "license": "MIT"
 }
