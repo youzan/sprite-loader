@@ -15,7 +15,7 @@
 ```
 
 ## 配置
-在webpack loaders配置项添加@youzan/sprite-loader。
+在webpack loaders配置项添加sprite-loader。
 
 ```
 loaders: [

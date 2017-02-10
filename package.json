@@ -1,6 +1,6 @@
 {
   "name": "sprite-loader",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "sprite loader module for webpack",
   "main": "index.js",
   "author": "liwei <vinnyguitar@126.com>",
