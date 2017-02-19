@@ -2,7 +2,7 @@
 ## Introduction
 [中文文档](https://github.com/youzan/sprite-loader/blob/master/README_ZH.md)
 
-Sprite sheet is a basic optimization approach for web developer. By the help of modern browser, svg is widely well supported now. Although icon font and svg sprite have similar outcome, sprite sheet has its own distinguish advantage. Such as:
+Image sprite is a basic optimization approach for web developer. By the help of modern browser, svg is widely well supported now. Although icon font and svg sprite have similar outcome, sprite sheet has its own distinguish advantage. Such as:
 
 1. Don't need vector graph. (for complicate graphic, drawing vector graph is quite difficult)
 2. Good compatibility.
