@@ -1,9 +1,14 @@
 {
   "name": "sprite-loader",
   "version": "0.1.3",
-  "description": "sprite loader module for webpack",
+  "description": "A image sprite loader for webpack.",
   "main": "index.js",
   "author": "liwei <vinnyguitar@126.com>",
+  "keywords": [
+    "sprite",
+    "webpack",
+    "retina"
+  ],
   "dependencies": {
     "co": "^4.6.0",
     "css": "^2.2.1",

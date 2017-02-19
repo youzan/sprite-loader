@@ -1,21 +1,23 @@
 # sprite-loader
-## 介绍
-精灵图（图片合并）是一种基本的前端优化手段。随着浏览器对svg支持得越来越好，icon font、svg sprite等技术也可以达到类似效果。相对于svg，精灵图还是有自己的适用场景和优势。
+## Introduction
+[中文文档](https://github.com/youzan/sprite-loader/blob/master/README_ZH.md)
 
-1. 不需要矢量源（一些较复杂的图，画成矢量是非常麻烦的）。
-2. 兼容性非常好。
-3. 当页面有大量的图标时，图片的性能好过svg。
-4. 小图的图片比svg小。
+Sprite sheet is a basic optimization approach for web developer. By the help of modern browser, svg is widely well supported now. Although icon font and svg sprite have similar outcome, sprite sheet has its own distinguish advantage. Such as:
 
-手动制作精灵图繁琐且后期维护麻烦，这种重复性的工作当然最适合交给机器去做。目前社区有很多自动合并精灵图的工具，如：compass、sprity、postcss-sprites、ispriter等。但是在webpack生态里，还没找到一个比较满意的工具。它们大多需要全局指定一个目录进行合并，这不符合webpack模块化的哲学，且笼统的合并会将当前用不到的图片合并进来，反而增加了网络请求。在webpack里应该用loader来做这个事情，天生模块化并且好扩展，于是有了sprite-loader。
+1. Don't need vector graph. (for complicate graphic, drawing vector graph is quite difficult)
+2. Good compatibility.
+3. Good performance, especially when there are massive amount of images
+4. Smaller size for small image comparing to sag.
 
-## 安装
+It’s very tedious to generate sprite sheet manually, and hard to update too. This kind of work is well fit for computer programs. There are quite many tools for generating sprite sheet in community, like compass, sprite, posts-sprites and ispriter. But none of them is perfect match with webpack. Most of them need to specify a directory to generate the sprite sheet, which violate the modular concept of webpack. Additionally, images that might never be used would be included too if just simply specify a working directory, which needs more bandwidth to download the sprite sheet.  In webpack, loader is suitable for this kind of work. Loader is modular processing by nature and very easy to extend. That’s why we create sprite-loader.
+
+## Installation
 ```
 	npm install sprite-loader --save
 ```
 
-## 配置
-在webpack loaders配置项添加sprite-loader。
+## Configuration
+Add sprite-loader configuration in webpack loaders.
 
 ```
 loaders: [
@@ -29,9 +31,9 @@ loaders: [
     }
 ]
 ```
-## 使用
-### 1.基本用法
-首先需要在样式文件前加一行注释sprite-loader-enable启用自动合并。然后按照最原始的方法引用图片即可。如下：
+## Usage
+### 1.Basic Usage
+First of all, add a comment in the first line of css file to enable auto combination, sprite-loader-enable. Then use the traditional way to introduce image.
 
 ```
 /* sprite-loader-enable */
@@ -51,7 +53,7 @@ loaders: [
     background: url(./img/pie@2x.png);
 }
 ```
-sprite-loader会收集样式表中的图片进行合并，计算background-positon。编译后的样式如下：
+Sprite-loader will collect the images in css files to combine and caculate backgroud position. The css after compilation is as follow:
 
 ```
 .flip_flops,
@@ -84,23 +86,26 @@ sprite-loader会收集样式表中的图片进行合并，计算background-posit
 }
 ```
 
-### 2.适配Retina屏
-Retina屏适配非常简单，你只需将图片存为2倍大小，且命名为xxx@2x.png。sprite-loader将会自动生成1x图和media query。
+### 2.Adapt Retina Screen
+It's very easy to adapt Retina screen. You just need to use double size images and name them as xxx@2x.png. sprite-loader will generate 1x images and media query automatically.
 
-### 3.禁用合并
-sprite-loader会收集样式文件中所有的background,background-image属性的图片进行合并，但以下几种情况除外。
+### 3.Disable Combination
+sprite-loader will collect all the background and background-image attributes in css files to combine. Except for following circumstance:
 
-1. 设置了background-position，background-size的图片。
+1. Images that set the background-position and background-size.
 	
 	```
-	/* 忽略有background-position的图片 */
+	/* ignore images that set background-position */
 	.bg1{background: url(1.png) no-repeat -10px -10px;}
-	/* 忽略有background-size的图片 */
+	/* ignore images that set background-size的 */
 	.bg2{background: url(2.png); background-size: 10px 10px;}
 	```
-2. url带#spriteignore参数的图片。
+2. Image url that contain #spriteignore string.
 	
 	```
-	/* 忽略有#spriteignore的图片 */
+	/* ignore all images that contain #spriteignore */
 	.bg3{background: url(3.png#spriteignore);}
 	```
+	
+## Licence
+MIT
