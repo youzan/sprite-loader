@@ -1,6 +1,6 @@
 {
   "name": "sprite-loader",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "A image sprite loader for webpack.",
   "main": "index.js",
   "author": "liwei <vinnyguitar@126.com>",
