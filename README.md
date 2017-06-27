@@ -2,6 +2,7 @@
 <a href="https://github.com/youzan/"><img alt="有赞logo" width="36px" src="https://img.yzcdn.cn/public_files/2017/02/09/e84aa8cbbf7852688c86218c1f3bbf17.png" alt="youzan"></a>
 </p>
 <p align="center">sprite-loader</p>
+
 ## Introduction
 [中文版](https://github.com/youzan/sprite-loader/blob/master/README_ZH.md)
 
