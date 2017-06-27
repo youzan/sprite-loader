@@ -10,7 +10,7 @@ sprite-loader is an image sprite generate tool.It helps you to resolve the troub
 
 ## Installation
 ```
-	npm install sprite-loader --save
+npm install sprite-loader --save
 ```
 
 ## Configuration
