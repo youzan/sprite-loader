@@ -15,11 +15,11 @@ sprite-loader是一款自动精灵图工具，帮你省去手动制作精灵图�
 loaders: [
     {
         test: /\.css/,
-        loader: 'style!sprite!css'
+        loader: 'style!css!sprite'
     },
     {
         test: /\.scss$/,
-        loader: 'style!sprite!css!sass'
+        loader: 'style!css!sprite!sass'
     }
 ]
 
@@ -27,11 +27,11 @@ loaders: [
 rules: [
     {
         test: /\.css/,
-        use: ['style-loader', 'sprite-loader', 'css-loader']
+        use: ['style-loader', 'css-loader', 'sprite-loader']
     },
     {
         test: /\.scss$/,
-        use: ['style-loader', 'sprite-loader', 'css-loader', 'sass-loader']
+        use: ['style-loader', 'css-loader', 'sprite-loader', 'sass-loader']
     }
 ]
 ```
