@@ -65,7 +65,7 @@ Retina屏适配非常简单，你只需将图片存为2倍大小，且命名为x
 sprite-loader会收集样式文件中所有的background,background-image属性的图片进行合并，但以下几种情况除外。
 
 1. 设置了background-position，background-size的图片。
-	
+
 	```
 	/* 忽略有background-position的图片 */
 	.bg1{background: url(1.png) no-repeat -10px -10px;}
@@ -73,11 +73,29 @@ sprite-loader会收集样式文件中所有的background,background-image属性�
 	.bg2{background: url(2.png); background-size: 10px 10px;}
 	```
 2. url带#spriteignore参数的图片。
-	
+
 	```
 	/* 忽略有#spriteignore的图片 */
 	.bg3{background: url(3.png#spriteignore);}
 	```
-	
+
+### 4.设置精灵图的输出路径
+通过设置`outputPath`选项设置精灵图的输出路径。该选项可以是以`output.path`为根目录的绝对路径或者相对于`output.path`的相对路径。
+
+设置的路径在内部会被转化为以`output.path`为根目录的绝对路径，同时在CSS中设置背景图的路径时，`output.publicPath`会被添加在路径的前面。
+
+```javascript
+const spriteLoader = {
+  loader: 'sprite-loader',
+  options: {
+    outputPath: '/static/imgs/sprites/'
+  }
+}
+```
+
+为什么`outputPath`最终被解析为以`output.path`为根目录的绝对路径？
+
+因为精灵图作为一种图片资源，部署时应该和其他图片位于同一个目录。
+
 ## 协议
 MIT
