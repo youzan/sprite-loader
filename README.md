@@ -68,7 +68,7 @@ It's very easy to adapt Retina screen. You just need to use double size images a
 sprite-loader will collect all the background and background-image attributes in css files to combine. Except for following circumstance:
 
 1. Images that set the background-position and background-size.
-	
+
 	```
 	/* ignore images that set background-position */
 	.bg1{background: url(1.png) no-repeat -10px -10px;}
@@ -76,11 +76,28 @@ sprite-loader will collect all the background and background-image attributes in
 	.bg2{background: url(2.png); background-size: 10px 10px;}
 	```
 2. Image url that contain #spriteignore string.
-	
+
 	```
 	/* ignore all images that contain #spriteignore */
 	.bg3{background: url(3.png#spriteignore);}
 	```
-	
+### 4.Set the output path of the sprite
+You can set the output path of the sprite through configure the `outputPath` option, which can be an absolute path with `output.path` as the root or a relative path relative to the `output.path`.
+
+The path setted will be transformed to an absolute path with `output.path` as the root, and the `output.publicPath` will be prepended when set the background image url in CSS.
+
+```javascript
+const spriteLoader = {
+  loader: 'sprite-loader',
+  options: {
+    outputPath: '/static/imgs/sprites/'
+  }
+}
+```
+
+Why transform the path to an absolute path with `output.path` as the root?
+
+Because sprite is one kind of image resource, it should be inside the image directory when deployed.
+
 ## Licence
 MIT
